@@ -1,0 +1,37 @@
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'image text';
+    font-family: var(--font-text);
+    text-align: center;
+    transition: 0.5s ease;
+}
+.odd {
+    grid-template-areas: 'text image';
+}
+.card-image {
+    grid-area: image;
+    width: 100%;
+    height: 100%;
+}
+.card-text {
+    grid-area: text;
+    margin: 25px;
+    color: var(--color-font);
+    font-family: var(--font-card);
+}
+.card-text p {
+    color: var(--color-font);
+    font-size: calc(9px + (18 - 9) * ((100vw - 320px) / (1280-320)));
+    font-weight: 400;
+}
+.card-text h2 {
+    margin-bottom: 1rem;
+    font-size: calc(14px + (25 - 14) * ((100vw - 320px) / (1280-320)));
+    font-weight: 700;
+}
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,34 @@
+.card-service {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 'image' 'text';
+
+    border-radius: 18px;
+    text-align: center;
+
+    transition: 0.5s ease;
+}
+.card-service-image {
+    grid-area: image;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 50%;
+}
+.card-service-text {
+    grid-area: text;
+    margin: 25px;
+    color: var(--color-font);
+    font-family: var(--font-card);
+}
+.card-service-text h2 {
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 1rem;
+    font-size: calc(14px + (25 - 14) * ((100vw - 320px) / (1280-320)));
+}
+.card-service-text p {
+    color: var(--color-font);
+    font-size: calc(9px + (18 - 9) * ((100vw - 320px) / (1280-320)));
+    font-weight: 400;
+}

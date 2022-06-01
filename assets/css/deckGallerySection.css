@@ -1,0 +1,36 @@
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px auto;
+    grid-template-areas:
+        'titulo'
+        'deck';
+    padding: 6rem;
+    gap: 1rem;
+}
+.gallery .titleGallery,
+.descGallery {
+    font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1280-320)));
+    font-family: var(--font-logo);
+    text-align: center;
+    align-self: center;
+}
+.gallery .descGallery {
+    font-family: var(--font-text);
+    font-size: calc(14px + (25 - 14) * ((100vw - 320px) / (1280-320)));
+    font-weight: 400;
+}
+.titleGallery {
+    grid-area: titulo;
+    justify-self: center;
+    color: var(--color-font);
+    font-size: 4em;
+    margin-bottom: 0.8rem;
+}
+.deckGallery {
+    grid-area: deck;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+    grid-template-rows: auto;
+    gap: 2rem;
+}

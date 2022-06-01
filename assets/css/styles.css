@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lora:wght@400;700&family=Montserrat:wght@200;400;600&display=swap');
+@import 'navbar.css';
+@import 'hero.css';
+@import 'deckServiceSection.css';
+@import 'serviceCard.css';
+@import 'deckGallerySection.css';
+@import 'galleryCard.css';
+:root {
+    --color-font: hsl(351, 24%, 41%);
+    --color-back: hsl(358, 59%, 89%);
+    --color-high: hsl(352, 81%, 61%);
+    --color-back2: hsl(37, 100%, 97%);
+    --font-logo: 'Berkshire Swash', cursive;
+    --font-text: 'Montserrat', sans-serif;
+    --font-card: 'Lora', serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 100;
+    color: var(--color-font);
+}
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-text);
+}
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120vh 1fr auto;
+    grid-template-areas:
+        'header'
+        'contenido'
+        'footer';
+}
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20vh 1fr;
+    grid-template-areas:
+        'navbar'
+        'hero';
+}
+main {
+    grid-area: contenido;
+}
