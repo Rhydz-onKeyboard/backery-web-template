@@ -61,3 +61,43 @@ footer {
     text-align: center;
     align-items: center;
 }
+.toUp {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-high);
+    position: fixed;
+    bottom: 5rem;
+    right: 2%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+    z-index: 10;
+}
+.toUp i {
+    color: white;
+    font-size: 1.2rem;
+}
+.toUp:hover {
+    background-color: hsl(352, 81%, 51%);
+}
+.toUp:hover i {
+    animation: bounce-up 1s ease-in 2;
+    transform-origin: bottom center;
+}
+@keyframes bounce-up {
+    10%,
+    35% {
+        transform: scale(1.5, 0.5) translate(0, 0);
+    }
+    45%,
+    50% {
+        transform: scale(1) translate(0, -10px);
+    }
+    80% {
+        transform: scale(1) translate(0, 0);
+    }
+}
