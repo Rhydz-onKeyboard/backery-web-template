@@ -5,6 +5,7 @@
 @import 'serviceCard.css';
 @import 'deckGallerySection.css';
 @import 'galleryCard.css';
+@import 'footer.css';
 :root {
     --color-font: hsl(351, 24%, 41%);
     --color-back: hsl(358, 59%, 89%);
@@ -30,7 +31,7 @@ body {
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 120vh 1fr auto;
+    grid-template-rows: 120vh 1fr 30vh;
     grid-template-areas:
         'header'
         'contenido'
@@ -47,4 +48,15 @@ header {
 }
 main {
     grid-area: contenido;
+}
+footer {
+    grid-area: footer;
+    background: var(--color-back);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'title' 'rrss' 'year';
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
 }

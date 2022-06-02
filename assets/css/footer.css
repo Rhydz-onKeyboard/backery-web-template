@@ -1,0 +1,18 @@
+.footerLogo .logo {
+    font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1280-320)));
+    color: var(--color-font);
+    text-decoration: none;
+    font-weight: 400;
+    font-family: var(--font-logo);
+}
+.rrss {
+    display: grid;
+    width: 30%;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+    grid-template-rows: auto;
+    justify-self: center;
+}
+.year {
+    font-family: var(--font-logo);
+    font-weight: 600;
+}
