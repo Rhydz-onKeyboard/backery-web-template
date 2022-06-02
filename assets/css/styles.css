@@ -57,6 +57,7 @@ footer {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 'title' 'rrss' 'year';
     padding: 2rem;
+    padding-top: 4rem;
     text-align: center;
     align-items: center;
 }

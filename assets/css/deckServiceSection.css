@@ -6,7 +6,7 @@
         'titulo'
         'deck';
     background: var(--color-back2);
-    padding: 6rem;
+    padding: 4rem 6rem;
     gap: 1rem;
 }
 .services .titleServices,
