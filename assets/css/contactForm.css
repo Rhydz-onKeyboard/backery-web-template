@@ -1,0 +1,82 @@
+.contactForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px auto;
+    grid-template-areas:
+        'titulo'
+        'body';
+    background: var(--color-back2);
+    padding: 4rem 6rem;
+    gap: 1rem;
+}
+.contactForm .titleContactForm,
+.descContactForm {
+    font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1280-320)));
+    font-family: var(--font-logo);
+    text-align: center;
+    align-self: center;
+}
+.contactForm .descContactForm {
+    font-family: var(--font-text);
+    font-size: calc(14px + (25 - 14) * ((100vw - 320px) / (1280-320)));
+    font-weight: 400;
+}
+.titleContactForm {
+    grid-area: titulo;
+    justify-self: center;
+    color: var(--color-font);
+    font-size: 4em;
+    margin-bottom: 0.8rem;
+}
+.bodyContactForm {
+    grid-area: body;
+    display: grid;
+    background-color: white;
+    width: 50%;
+    justify-self: center;
+}
+
+.bodyContactForm {
+    padding: 2rem;
+    box-sizing: border-box;
+}
+.bodyContactForm .input,
+label {
+    margin-bottom: 1rem;
+    font-family: var(--font-text);
+    color: var(--color-font);
+    font-weight: 400;
+    font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1280-320)));
+}
+.bodyContactForm .input {
+    padding: 0.5rem;
+    border: 0;
+    border-bottom: 2px solid var(--color-high);
+}
+.bodyContactForm .input:focus {
+    outline: 2px solid var(--color-high);
+    border-bottom: 0;
+    color: var(--color-high);
+}
+.bodyContactForm textarea {
+    resize: none;
+}
+.contactForm .btnForm {
+    margin-top: 1rem;
+    justify-self: center;
+    justify-content: center;
+    width: 30%;
+    background-color: var(--color-high);
+    color: white;
+    border: none;
+    font-family: var(--font-text);
+    text-transform: uppercase;
+    padding: 1rem;
+    letter-spacing: 2px;
+    font-size: calc(6px + (16 - 6) * ((100vw - 320px) / (1280-320)));
+    font-weight: 400;
+    border-radius: 50px;
+}
+.contactForm .btnForm:hover {
+    box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.3);
+}
