@@ -80,3 +80,24 @@ label {
 .contactForm .btnForm:hover {
     box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.3);
 }
+.contactForm .notificacion {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+}
+.contactForm .error {
+    background: hsl(356, 73%, 74%);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.contactForm .success {
+    background: hsl(144, 44%, 67%);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contactForm .textNotification {
+    color: white;
+    font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1280-320)));
+    font-weight: 600;
+}

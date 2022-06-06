@@ -20,6 +20,7 @@ const send = async () => {
     const email = d.querySelector('#email');
     const subject = d.querySelector('#subject');
     const message = d.querySelector('#message');
+    const notification = d.querySelector('.notification');
     const config = {
         method: 'POST',
         headers: {
@@ -35,10 +36,34 @@ const send = async () => {
         'https://mail-sender-serv.herokuapp.com/mailing',
         config
     );
-    console.log(await data.json());
+    res = await data.json();
+    if (data.status !== 200) {
+        notification.style.visibility = 'visible';
+        notification.style.opacity = 1;
+        notification.style.transition = '0.5s ease';
+        notification.className += ' error';
+        notification.innerHTML = `
+            <p class="textNotification">Hubo un error al enviar el mensaje</p>
+        `;
+    } else {
+        notification.style.visibility = 'visible';
+        notification.style.opacity = 1;
+        notification.style.transition = '0.5s ease';
+        notification.className += ' success';
+        notification.innerHTML = `
+            <p class="textNotification">${res.msg}</p>
+        `;
+    }
     email.value = '';
     subject.value = '';
     message.value = '';
+
+    setTimeout(() => {
+        notification.className = 'notification';
+        notification.style.opacity = 0;
+        notification.style.transition = '0.5s ease';
+        notification.style.visibility = 'hidden';
+    }, 10000);
 };
 
 form.addEventListener('submit', (e) => {
