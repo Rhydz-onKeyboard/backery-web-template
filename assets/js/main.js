@@ -33,7 +33,7 @@ const send = async () => {
         }),
     };
     data = await fetch(
-        'https://mailer-4bbi.onrender.com',
+        'https://mailer-4bbi.onrender.com/mailing',
         config
     );
     res = await data.json();
