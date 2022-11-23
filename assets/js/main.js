@@ -33,7 +33,7 @@ const send = async () => {
         }),
     };
     data = await fetch(
-        'https://mail-sender-serv.herokuapp.com/mailing',
+        'https://mailer-4bbi.onrender.com',
         config
     );
     res = await data.json();
