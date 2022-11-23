@@ -18,7 +18,7 @@ toUp.addEventListener('click', () => {
 let form = d.querySelector('#contact');
 const send = async () => {
     const email = d.querySelector('#email');
-    const name = d.querySelector('#name');
+    const fullname = d.querySelector('#name');
     const message = d.querySelector('#message');
     const notification = d.querySelector('.notification');
     const config = {
@@ -28,7 +28,7 @@ const send = async () => {
         },
         body: JSON.stringify({
             email: email.value,
-            name: name.value,
+            name: fullname.value,
             message: message.value,
         }),
     };
@@ -55,7 +55,7 @@ const send = async () => {
         `;
     }
     email.value = '';
-    subject.value = '';
+    fullname.value = '';
     message.value = '';
 
     setTimeout(() => {
